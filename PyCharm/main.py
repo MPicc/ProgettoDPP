@@ -1,9 +1,5 @@
 from spmf import Spmf
 import pandas as pd
 
-
-spmf = Spmf("LAPIN", input_filename="../BMS1_spmf.txt",
-            output_filename="output.txt", arguments=[0.1, 5])
-spmf.run()
-print(spmf.to_pandas_dataframe(pickle=True))
-spmf.to_csv("output.csv")
+dataset = pd.read_csv("../SampleDataset.csv")
+print(dataset.head())
